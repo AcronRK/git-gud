@@ -1,6 +1,7 @@
 import React from 'react'
 import VideoPlayer from './VideoPlayer';
 import useMediaQuery from '@/hooks/useMediaQuery';
+import { motion } from 'framer-motion'
 
 type Props = {
     videoSide: string; // left or right
@@ -12,29 +13,54 @@ type Props = {
 
 const Card = ({videoSide, player, title, description, url}: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1180px")
-  let getFlexVideoside = ""
+  let getFlexVideoside:string;
+  let direction:number;
   if(isAboveMediumScreens){
     getFlexVideoside = (videoSide === "left" ? "flex" : "flex flex-row-reverse");
   }else{
-    getFlexVideoside = " flex flex-col-reverse"
+    getFlexVideoside = " flex flex-col-reverse";
   }
+
+  direction = (videoSide === "left" ? -1 : 1)
   
   return (
     <div>
         <div className={`${getFlexVideoside} my-16 md:pb-20 md:gap-48 justify-between`} >
             {/* video player */}
-            <div className='my-10'>
+            <motion.div 
+              className='my-10'
+              initial="hidden"
+              whileInView="visible"
+              viewport={{once: true, amount: 0.5}}
+              transition={{duration: 1}}
+              variants={{
+                  hidden: { opacity: 0, x: direction*100 },
+                  visible: { opacity: 1, x: 0}
+
+              }}
+            >
                 <VideoPlayer 
                     url={url}
                 />
-            </div>
+            </motion.div>
 
             {/* description */}
-            <div className='flex flex-col justify-center text-center'>
+            <motion.div 
+              className='flex flex-col justify-center text-center'
+              initial="hidden"
+              whileInView="visible"
+              viewport={{once: true, amount: 0.5}}
+              transition={{duration: 1}}
+              variants={{
+                  hidden: { opacity: 0, x: -direction*100 },
+                  visible: { opacity: 1, x: 0}
+
+              }}
+              >
                 <h1 className='font-bold text-[120px] font-roboto tracking-widest text-red-500'>{player.toUpperCase()}</h1>
                 <p className='font-bold text-[60px] font-roboto tracking-wider'>{title}</p>
                 <p className='text-[20px] font-roboto'>{description}</p>
-            </div>
+            </motion.div>
         </div>
         
     </div>
