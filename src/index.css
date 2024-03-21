@@ -13,4 +13,6 @@ body,
     width: 100%;
     font-family: "DM Sans", sans-serif;
     @apply text-primary-500;
+    @apply bg-slate-900;
+    scroll-behavior: smooth;
 }
