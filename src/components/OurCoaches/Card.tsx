@@ -1,4 +1,3 @@
-import React from 'react'
 import VideoPlayer from './VideoPlayer';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import { motion } from 'framer-motion'

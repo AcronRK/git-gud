@@ -1,11 +1,7 @@
-import React from 'react'
 import Logo from "@/assets/logo.png"
 import { useForm } from 'react-hook-form'
 
-
-type Props = {}
-
-const ContactUs = (props: Props) => {
+const ContactUs = () => {
   const inputStyles = `mt-5 w-full rounded-lg bg-slate-700 px-5 py-3 placeholder-white`
   const {
     register,

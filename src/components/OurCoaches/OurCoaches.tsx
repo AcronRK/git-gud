@@ -1,9 +1,6 @@
-import React from 'react'
 import Card from './Card'
 
-type Props = {}
-
-const OurCoaches = (props: Props) => {
+const OurCoaches = () => {
   return (
     <section id="ourcoaches" className="mx-auto w-5/6 items-center justify-center py-24">
       <Card 

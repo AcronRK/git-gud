@@ -1,10 +1,7 @@
-import React from 'react'
 import faker from "@/assets/faker.png"
 import Button from '../Button';
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <section id="home" className='w-fill gap-16 bg-gray-20 py-10 md:h-ful md:pb-0'>
       <div className='md:flex mx-auto mt-44 justify-center items-center w-5/6'>

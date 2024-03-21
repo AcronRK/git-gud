@@ -1,8 +1,6 @@
 import { MagnifyingGlassCircleIcon, ClockIcon,  ArrowUpIcon} from "@heroicons/react/16/solid"
 
-type Props = {}
-
-const WhyUs = (props: Props) => {
+const WhyUs = () => {
   return (
     <section
       id="whyus"
