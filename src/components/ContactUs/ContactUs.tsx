@@ -21,25 +21,26 @@ const ContactUs = () => {
       id="contactus"
       className='w-full py-32'
     >
-      <div className='flex justify-center'>
-        <div className='flex w-5/6 gap-36'>
+      <div className='md:flex justify-center w-full'>
+        <div className='md:flex gap-36 md:w-5/6'>
           {/* left side - about */}
           <div className='py-5'>
-            <div className='flex flex-col basis-2/5 my-5 gap-10'>
+            <div className='flex flex-col my-5 gap-10 text-center items-center'>
               {/* icon */}
               <img src={Logo} alt="logo" className='w-36'/>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam dicta, laborum eligendi illum sint veniam eveniet, voluptatum ad, unde nisi fugit harum accusamus? Inventore beatae expedita minus sapiente impedit aspernatur!</p>
             </div>
           </div>
           {/* right side - text and form */}
-          <div className='flex flex-col basis-4/5'>
+          <div className='flex flex-col'>
               {/* Join now text */}
-              <div className='py-5'>
+              <div className='md:py-5 text-center'>
                 <span className='fond-bold text-2xl'>Join Now To Git Guder!</span>
               </div>
               {/* form  */}
-              <div>
+              <div className="mt-10 justify-between gap-8 md:flex">
                 <form 
+                  className="text-center items-center"
                   method="POST"
                   target="_blank"
                   onSubmit={onSubmit}

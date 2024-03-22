@@ -27,7 +27,7 @@ const Card = ({videoSide, player, title, description, url}: Props) => {
         <div className={`${getFlexVideoside} my-16 md:pb-20 md:gap-48 justify-between`} >
             {/* video player */}
             <motion.div 
-              className='my-10'
+              className='my-10 hidden md:block'
               initial="hidden"
               whileInView="visible"
               viewport={{once: true, amount: 0.5}}
@@ -45,7 +45,7 @@ const Card = ({videoSide, player, title, description, url}: Props) => {
 
             {/* description */}
             <motion.div 
-              className='flex flex-col justify-center text-center'
+              className='md:flex md:flex-col justify-center text-center'
               initial="hidden"
               whileInView="visible"
               viewport={{once: true, amount: 0.5}}
@@ -56,8 +56,8 @@ const Card = ({videoSide, player, title, description, url}: Props) => {
 
               }}
               >
-                <h1 className='font-bold text-[120px] font-roboto tracking-widest text-red-500'>{player.toUpperCase()}</h1>
-                <p className='font-bold text-[60px] font-roboto tracking-wider'>{title}</p>
+                <h1 className='font-bold md:text-[120px] text-[90px] font-roboto tracking-widest text-red-500'>{player.toUpperCase()}</h1>
+                <p className='font-bold md:text-[60px] text=[40px] font-roboto tracking-wider'>{title}</p>
                 <p className='text-[20px] font-roboto'>{description}</p>
             </motion.div>
         </div>
