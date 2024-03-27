@@ -27,7 +27,7 @@ const Card = ({videoSide, player, title, description, url}: Props) => {
         <div className={`${getFlexVideoside} my-16 md:pb-20 md:gap-48 justify-between`} >
             {/* video player */}
             <motion.div 
-              className='my-10 hidden md:block'
+              className='my-10 md:basis-4/5'
               initial="hidden"
               whileInView="visible"
               viewport={{once: true, amount: 0.5}}

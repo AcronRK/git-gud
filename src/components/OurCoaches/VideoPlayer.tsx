@@ -6,12 +6,13 @@ type Props = {
 
 const VideoPlayer = ({ url }: Props) => {
   return (
-    <div>
-      <ReactPlayer
+      <div className='relative'> {/* Set max width to prevent excessive stretching */}
+        <ReactPlayer
           url={url}
+          width='100%'    
         />
-    </div>
+      </div>
   )
 }
 
-export default VideoPlayer
+export default VideoPlayer;
