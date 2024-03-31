@@ -4,7 +4,7 @@ const OurCoaches = () => {
   return (
     <section id="ourcoaches" className="mx-auto w-5/6 items-center justify-center py-24 overflow-x-hidden">
       {/* Add overflow-x-hidden class to the section */}
-      <div className="flex flex-col md:flex-row overflow-x-hidden">
+      <div className="md:flex md:flex-col overflow-x-hidden">
         <Card 
           videoSide="left"
           player="Faker"
