@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Card = ({videoSide, player, title, description, url}: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1180px")
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
   let getFlexVideoside:string;
   let direction:number;
   if(isAboveMediumScreens){

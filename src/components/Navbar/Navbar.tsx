@@ -12,7 +12,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
   const flexBetween = "flex items-center justify-between";
   // used to hide navbar for small screens
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1180px")
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
 
   // change navbar color if user scrolls
   const navbarBackground = isTopOfPage ? "" : "bg-slate-800 drop-shadow";
