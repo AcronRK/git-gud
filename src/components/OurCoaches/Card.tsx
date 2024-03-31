@@ -33,7 +33,7 @@ const Card = ({videoSide, player, title, description, url}: Props) => {
               viewport={{once: true, amount: 0.5}}
               transition={{duration: 1}}
               variants={{
-                  hidden: { opacity: 0, x: direction*100 },
+                  hidden: { opacity: 0, x: direction*20 },
                   visible: { opacity: 1, x: 0}
 
               }}
@@ -51,7 +51,7 @@ const Card = ({videoSide, player, title, description, url}: Props) => {
               viewport={{once: true, amount: 0.5}}
               transition={{duration: 1}}
               variants={{
-                  hidden: { opacity: 0, x: -direction*100 },
+                  hidden: { opacity: 0, x: -direction*20 },
                   visible: { opacity: 1, x: 0}
 
               }}
